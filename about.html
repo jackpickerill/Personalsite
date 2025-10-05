@@ -115,14 +115,17 @@ a:hover {
 }  
 
 
-/* Mobile: stack image and text/form */
-@media (max-width: 30px) 
-  {
-  .profile-container
+@media (max-width: 800px) {
+  .profile-container {
     flex-direction: column;
     text-align: center;
+    max-width: 70%;
+    text-align: left;
+    .profile-image {
+      max-width: 60%;
+    margin-top: 3px;}
   }
-
+  
   .profile-image {
     margin-bottom: 20px;
   }
@@ -158,7 +161,7 @@ src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759602073/jackpickerill
 style="width: 300px;" 
 alt="product-photographer-manchester"></img>
 
-<p class="profile-text"> A multifaceted photographer living and working in Manchester as a full time freelancer.
+<p class="profile-text"> A multifaceted photographer living and working in Manchester as a full time freelancer.<br></br>
 Alongside my own projects I also manage the product photography agency <a href="https://tealstudios.co.uk/" class="underline-link">Teal Studios</a>
 I'm happy to answer any enquiries regarding rates and availability, feel free to email jackpickerill@live.co.uk or call the contact number below.</p>
 </div>
