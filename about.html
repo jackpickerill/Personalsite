@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jack Pickerill Photographer | Product Photographer | Manchester</title>
+  <link rel="stylesheet" href="style.css">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
+<style>
+  .site-title
+  {color:#858484;
+  text-align: center;
+  font-family: 'Didact Gothic';
+  letter-spacing: 6px;
+  font-weight: 100;
+  font-size: 36px;
+  transform: scaleY(1.15);
+  margin-bottom: 0;
+  margin-top: 20;}
+</style>
+
+<style>
+  .site-subtitle
+  {color:#858484;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Didact Gothic';
+  letter-spacing: 4px;
+  font-weight: 100;
+  font-size: 24px;
+  transform: scaleY(1.15);
+  margin-top: 2px;
+  }
+</style>
+
+<style>
+body {
+  font-family: 'Didact Gothic', sans-serif;
+  background-color: #fbfbfb;
+  color: #262626;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer 
+{ 
+  color:#858484;
+  text-align: center;
+  font-family: 'Didact Gothic';
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 16px;
+  transform: scaleY(1.15);
+  margin-bottom: 0;
+  margin-top: 100;
+margin-bottom: 50;}
+  
+
+  a {
+  color: inherit;       /* makes the link take the text color of its parent */
+  text-decoration: none; /* removes underline */
+}
+
+a:hover {
+  text-decoration: underline; /* optional: underline on hover */
+  color: #858484;             /* optional: change color on hover */
+}
+.main-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #858484;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16px;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+</style>
+
+<style>.profile-image  
+{margin-top: 50px;
+  margin-left: 300px;
+  width: 250px;
+  display: flex;           /* side-by-side layout */
+  align-items: center;     /* vertically center image & text */
+  gap: 40px;               /* space between image and paragraph */
+  max-width: 900px;        /* limit container width */
+  margin: 50px auto;       /* center on page with some top margin */
+  padding: 0 20px;         
+
+  height: auto;            /* keep aspect ratio */
+  border-radius: 4px;
+}
+
+.profile-text {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #858484;
+}
+.profile-container{
+  display: flex;           /* side-by-side layout */
+  align-items: center;     /* vertically center image & text */
+  gap: 40px;               /* space between image and paragraph */
+  max-width: 900px;        /* limit container width */
+  margin: 50px auto;       /* center on page with some top margin */
+  padding: 0 20px;         /* optional horizontal padding */
+}  
+</style>
+
+<style>.contact-form input,
+.contact-form textarea {
+  width: 40%;
+  padding: 8px;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;;
+  max-width: 440px;
+;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16px;
+  background-color: #858484;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.contact-form button:hover {
+  background-color: #6f6f6f;
+}
+
+/* Mobile: stack image and text/form */
+@media (max-width: 600px)
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin-bottom: 20px;
+  }
+
+  .profile-right {
+    width: 100%;
+  }
+.form-container
+{margin-left: 320px;}
+  </style>
+
+
+</head>
+
+
+
+<body>
+
+<h1 class="site-title">Jack Pickerill</h1>
+<h2 class="site-subtitle">photographer</h2>
+  
+<nav class="main-nav">
+  <a href="index.html">still life</a>
+  <a href="about.html">about/contact</a>
+</nav>
+
+<div class="profile-container">
+<img class="profile-image" 
+src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759602073/jackpickerill_m4yqag.jpg" 
+style="width: 300px;" 
+alt="product-photographer-manchester">
+
+<p class="profile-text"> A multifaceted photographer living and working in Manchester as a full time freelancer
+I also manage the product photography agency Teal Studios.
+I'm happy to answer any enquiries regarding rates and availability, feel free to email jackpickerill@live.co.uk or use the contact form below.</p>
+</div>
+
+<div class="form-container">
+<form class="contact-form" action="mailto:jackpickerill@live.co.uk" method="post" enctype="text/plain">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+    <flex-direction:column></flex-direction:column>
+</div>
+
+
+
+
+
+
+<footer class="site-footer">
+  <p>Email: 
+    <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a> 
+    | Phone:
+     <a href="tel:07817597117">07817597117</a></p>
+     
+     <p>
+  <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
+      <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593166/instagram_logo_mpb0im.avif" alt="Instagram" class="social-icon">
+    </a>
+<a href="https://www.linkedin.com/in/jackpickerill/" target="_blank" rel="noopener noreferrer">
+      <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593148/linkedinlogo_aepjgt.avif" alt="linkedin" class="social-icon">
+    </a>
+</p>
+
+</footer>
+</body>
+
+</html>  
