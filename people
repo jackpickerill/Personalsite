@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jack Pickerill Photographer | Product Photographer | Manchester</title>
+  <link rel="stylesheet" href="style.css">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
+<style>
+  .site-title
+  {color:#858484;
+  text-align: center;
+  font-family: 'Didact Gothic';
+  letter-spacing: 6px;
+  font-weight: 100;
+  font-size: 36px;
+  transform: scaleY(1.15);
+  margin-bottom: 0;
+  margin-top: 20;}
+
+
+
+  .site-subtitle
+  {color:#858484;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Didact Gothic';
+  letter-spacing: 4px;
+  font-weight: 100;
+  font-size: 24px;
+  transform: scaleY(1.15);
+  margin-top: 2px;
+  }
+
+body {
+  font-family: 'Didact Gothic', sans-serif;
+  background-color: #fbfbfb;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}   
+
+.gallery {
+  display: grid;
+grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 0;
+  padding: 10px;
+  max-width: 2500px;
+  justify-content: center ; /* optional: center gallery on page */
+  margin: 0 auto;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;   /* ensures image fills its grid cell */
+  height: auto;  /* keeps aspect ratio */
+  object-fit: cover;
+  border-radius:0 ;
+  transition: transform 0.3s ease, opacity 0.3s ease;}
+
+.site-footer { 
+  color:#858484;
+  text-align: center;
+  font-family: 'Didact Gothic';
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 15px;
+  transform: scaleY(1.15);
+  margin-bottom: 0;
+  margin-top: 100;
+margin-bottom: 50;}
+  
+
+  a {
+  color: inherit;       /* makes the link take the text color of its parent */
+  text-decoration: none; /* removes underline */
+}
+
+a:hover {
+  text-decoration: underline; /* optional: underline on hover */
+  color: #858484;             /* optional: change color on hover */
+}
+.main-nav {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.main-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #858484;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16px;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .gallery {
+  columns: 1;}
+}
+
+
+@media (max-width: 800px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    max-width: 70%;
+    text-align: left;
+    .profile-image {
+      max-width: 50%;
+      max-height: auto;
+    margin-top: 3px;}
+  }
+
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+<h1 class="site-title">Jack Pickerill</h1>
+<h2 class="site-subtitle">photographer</h2>
+  <nav class="main-nav">
+  <a href="index.html">still life</a>
+  <a href="about.html">about/contact</a>
+   <a href="people.html">people</a>
+</nav>
+
+  <div class="gallery">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760986773/manchester-commercial-photographer-9_nkvrnb.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760989837/manchester-commercial-photographer-8_l6wwky.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760990515/_DSC7264_xyigzr.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991134/manchester-commercial-photographer-4_t3jx96.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991190/manchester-commercial-photographer-11_vdmpqe.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991279/Jack_Pickerill-2_ikxwuu.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991492/_DSC7003_ezllvx.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991583/manchester-commercial-photographer-3_lv83tm.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991606/Jack_Pickerill__20180227_21099_sxkw8v.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991858/17_London_Mar_21_2025_000571_htdjct.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20180317-Jack_Pickerill_180317_0074_it3qz2.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20190425-Jack_Pickerill--2_tsdr8c.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20171118-Jack_Pickerill_171102_0018-2-Edit_mf2a4g.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20180505-Jack_Pickerill_180505_0063_qvdlku.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991161/manchester-commercial-photographer-1_nfajjv.jpg" alt="product-photographer-manchester">
+    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991216/manchester-commercial-photographer-13_wswezi.jpg" alt="product-photographer-manchester">
+
+  </div>
+</body>
+
+
+
+
+
+<footer class="site-footer">
+  <p>Email: 
+    <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a> 
+    | <br></br> Phone:
+     <a href="tel:07817597117">07817597117</a></p>
+     
+     <p>
+  <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
+      <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593166/instagram_logo_mpb0im.avif" alt="Instagram" class="social-icon">
+    </a>
+<a href="https://www.linkedin.com/in/jackpickerill/" target="_blank" rel="noopener noreferrer">
+      <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593148/linkedinlogo_aepjgt.avif" alt="linkedin" class="social-icon">
+    </a>
+</p>
+
+</footer>
+</html>  
