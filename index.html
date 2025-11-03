@@ -172,11 +172,13 @@ a:hover {
             user-select: none;
         }
 
-        @media (max-width: 768px) {
-            .slide-counter {
-                top: 2rem;
-                font-size: 12px;
-            }
+        
+@media (max-width: 768px) {
+    .slide-counter {
+        bottom: 1.5rem;  /* keeps it near the bottom */
+        top: auto;       /* reset any top value */
+        font-size: 12px; /* optional smaller font for mobile */
+    }
         }
 
         /* Navigation */
