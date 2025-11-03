@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html>
-
-
-
-
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jack Pickerill Photographer | Product Photographer | Manchester</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
-
-<style>
-  .site-title
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Pickerill | Freelance Photographer | Manchester</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        a {
+  color: inherit;       /* makes the link take the text color of its parent */
+  text-decoration: none; /* removes underline */
+}
+ .site-title
   {color:#858484;
   text-align: center;
   font-family: 'Didact Gothic';
@@ -41,58 +40,40 @@
   margin-top: 2px;
   }
 
-body {
-  font-family: 'Didact Gothic', sans-serif;
-  background-color: #fbfbfb;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}   
+  .tealstudios-link
+{color: rgb(103, 189, 189);
+align-content: center;
+margin-top: 10px;}
 
-.gallery {
-  display: block;
-  column-count: 2;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* max width of each column */
-  grid-gap: 0;
-  padding: 10px;
-  max-width: 2500px;
-  justify-content: center ; /* optional: center gallery on page */
-  margin: 0 auto;
-}
 
-.gallery img {
-  display: block;
-  width: 100%;   /* ensures image fills its grid cell */
-  height: auto;  /* keeps aspect ratio */
-  object-fit: cover;
-  border-radius:0 ;
-  transition: transform 0.3s ease, opacity 0.3s ease;}
-
-.site-footer { 
+.site-footer 
+{ 
   color:#858484;
   text-align: center;
+  line-height: 11px;
   font-family: 'Didact Gothic';
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 100;
   font-size: 15px;
-  transform: scaleY(1.15);
+  transform: scaleY(1);
   margin-bottom: 0;
   margin-top: 100;
 margin-bottom: 50;}
-  
-
-  a {
-  color: inherit;       /* makes the link take the text color of its parent */
-  text-decoration: none; /* removes underline */
-}
 
 a:hover {
-  text-decoration: underline; /* optional: underline on hover */
-  color: #858484;             /* optional: change color on hover */
+  text-decoration: underline; 
+  color: #858484;             
 }
 .main-nav {
   text-align: center;
   margin: 30px 0;
+}
+
+
+
+  a {
+  color: inherit;       /* makes the link take the text color of its parent */
+  text-decoration: none; /* removes underline */
 }
 
 .main-nav a {
@@ -106,92 +87,308 @@ a:hover {
 .main-nav a:hover {
   text-decoration: underline;
 }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@media (max-width: 800px) {
-  .gallery {
-  columns: 1;}
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #fff;
+            overflow-x: hidden; /* hide sideways scroll only */
+    overflow-y: auto;   /* allow vertical scrolling */
+        }
 
+        .swiper {
+      
+            width: 100%;
+            height: 100vh;
+        }
 
-@media (max-width: 800px) {
-  .profile-container {
-    flex-direction: column;
-    text-align: center;
-    max-width: 70%;
-    text-align: left;
-    .profile-image {
-      max-width: 50%;
-      max-height: auto;
-    margin-top: 3px;}
-  }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+        }
 
+        .swiper-slide img {
+            max-width: calc(100% - 3rem);
+            max-height: calc(100vh - 15rem);
+            object-fit: contain;
+            display: block;
+            user-select: none;
+        }
 
+        @media (max-width: 768px) {
+            .swiper-slide img {
+                max-height: 80vh;
+                padding-top: 2.5rem;
+            }
+        }
 
-</style>
+        /* Image pair container */
+        .image-pair {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width: calc(100% - 3rem);
+            height: calc(100vh - 15rem);
+        }
+
+        .image-pair img {
+            max-width: calc(50% - 1rem);
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            .image-pair {
+                flex-direction: column;
+                gap: 1rem;
+                height: 75vh;
+            }
+            
+            .image-pair img {
+                max-width: 100%;
+                max-height: calc(50% - 0.5rem);
+            }
+        }
+
+        /* Counter */
+        .slide-counter {
+            position: absolute;
+            bottom: 4.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 30;
+            display: flex;
+            gap: 1rem;
+            color: #999;
+            font-size: 14px;
+            user-select: none;
+        }
+
+        @media (max-width: 768px) {
+            .slide-counter {
+                top: 2rem;
+                font-size: 12px;
+            }
+        }
+
+        /* Navigation */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #fff;
+            width: 50%;
+            height: 100%;
+            top: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            content: '';
+        }
+
+        /* Header */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: #000000;
+        }
+
+        /* Loading state */
+        .swiper-slide img {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .swiper-slide img.loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
-
-
-
-
-
-
-
-
 <body>
+    <header>
 <h1 class="site-title">Jack Pickerill</h1>
 <h2 class="site-subtitle">photographer</h2>
-  <nav class="main-nav">
-  <a href="index.html">still life</a>
-     <a href="people.html">people</a>
+        <nav class="main-nav">
+    <a href="index.html">home</a>
+   <a href="still life.html">still life</a>
+    <a href="people.html">people</a>
   <a href="about.html">about/contact</a>
+  <a href="Personal.html">personal</a>
 </nav>
 
-  <div class="gallery">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588976/product-photography-manchester-1_jjubon.gif
-" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588976/product-photography-manchester-2_neqavy.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588976/product-photography-manchester-3_ree7hk.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588978/product-photography-manchester-4_fbhvpv.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588978/product-photography-manchester-5_l6y93l.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588978/product-photography-manchester-6_owva6z.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588976/product-photography-manchester-7_xplxt8.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588977/product-photography-manchester-8_k3eaqc.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588977/product-photography-manchester-9_rqb8zw.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588979/product-photography-manchester-10_ghqhpl.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588978/product-photography-manchester-11_vjq1kv.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588979/product-photography-manchester-12_wlfsep.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588978/product-photography-manchester-13_izp8t9.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588979/product-photography-manchester-14_gqpg2l.jpg  " alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759591250/product-photography-manchester-15_y54w3t.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759591200/product-photography-manchester-16_asbwyx.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588980/product-photography-manchester-17_vteqvl.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588979/product-photography-manchester-18_d0szeh.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588980/product-photography-manchester-19_exxhdg.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588981/product-photography-manchester-20_zzx2fq.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588980/product-photography-manchester-21_doddrz.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588982/product-photography-manchester-22_ancavl.png" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588980/product-photography-manchester-23_hew1a1.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759591527/product-photography-manchester-24_jgceoi.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588981/product-photography-manchester-25_fm7dsc.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588983/product-photography-manchester-26_ezaigd.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588982/product-photography-manchester-27_vomnf7.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588983/product-photography-manchester-28_xvsaj4.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588982/product-photography-manchester-29_odfejd.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759591625/product-photography-manchester-30_adfwtu.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588982/product-photography-manchester-31_hvudc5.jpg" alt="product-photographer-manchester">
-  </div>
-</body>
+    </header>
+
+    
+    <div class="swiper">
+      <br>
+      <br>
+      <br>
+      <br>
+        <div class="swiper-wrapper">
+            <!-- Single Images -->
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588976/product-photography-manchester-3_ree7hk.jpg" alt="product-photographer-manchester">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762204302/jack-pickerill-9_klmx9z.jpg" alt="freelance-photographer-manchester">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762183437/jack-pickerill-8_ydearm.jpg" alt="freelance-photographer-manchester">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762206283/manchester-commercial-photographer-7_o6pxtq.jpg" alt="freelance-photographer-manchester">
+            
+              </div><div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762183612/jack-pickerill-41_segfuh.jpg" alt="product-photographer-manchester">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991161/manchester-commercial-photographer-1_nfajjv.jpg" alt="freelance-photographer-manchester">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759588977/product-photography-manchester-9_rqb8zw.jpg" alt="product-photographer-manchester">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762205237/jack-pickerill-1-4_lxligw.jpg" alt="product-photographer-manchester">
+            </div>
+            
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762206689/jack-pickerill-1-5_zwb2br.jpg" alt="product-photographer-manchester">
+                </div>
 
 
+            <div class="swiper-slide">
+                <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762206285/Jack_Pickerill_170706_0001-Edit_redx3z.jpg" alt="product-photographer-manchester">
+            </div>           
+            
 
+            <!-- Image Pair -->
+            <div class="swiper-slide">
+                <div class="image-pair">
+                    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762206285/20190606-Jack_Pickerill-1462_edited_norkbr.jpg" alt="Col Store">
+                    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1761950801/jack-pickerill-1-2_gtl4i4.jpg" alt="Col Store">
+                </div>
+            </div>
 
+            
+                </div>
+            </div>
 
-<footer class="site-footer">
-  <p>Email: 
+            
+        </div>
+
+        <div class="slide-counter">
+            <span id="current-slide">1</span>
+            <span>/</span>
+            <span id="total-slides">11</span>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper', {
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 400,
+            loop: true,
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                init: function() {
+                    updateCounter(this);
+                    lazyLoadImages(this);
+                },
+                slideChange: function() {
+                    updateCounter(this);
+                    lazyLoadImages(this);
+                }
+            }
+        });
+
+        // Update slide counter
+        function updateCounter(swiper) {
+            const current = swiper.realIndex + 1;
+            document.getElementById('current-slide').textContent = current;
+        }
+
+        // Lazy load images with fade-in effect
+        function lazyLoadImages(swiper) {
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            const images = activeSlide.querySelectorAll('img');
+            
+            images.forEach(img => {
+                if (!img.classList.contains('loaded')) {
+                    img.onload = function() {
+                        img.classList.add('loaded');
+                    };
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    }
+                } else {
+                    img.classList.add('loaded');
+                }
+            });
+        }
+
+        // Keyboard navigation hint
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Navigation: Click left/right side of screen or use arrow keys');
+        });
+    </script>
+
+   <footer class="site-footer">
+  <p><br><br>Email: 
     <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a> 
     | <br></br> Phone:
      <a href="tel:07817597117">07817597117</a></p>
      
+     
+<div class="tealstudios-link"> 
+  <a href="https:www.tealstudios.co.uk">Teal Studios</a>
+  
+     <br><br>
      <p>
   <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
       <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593166/instagram_logo_mpb0im.avif" alt="Instagram" class="social-icon">
@@ -202,4 +399,5 @@ a:hover {
 </p>
 
 </footer>
-</html>  
+</body>
+</html>
