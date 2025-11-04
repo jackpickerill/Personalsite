@@ -90,27 +90,12 @@ a:hover {
   text-decoration: underline;
 }
 
-.profile-image  
-{margin-top: 50px;
-  margin-left: 300px;
-  width: 250px;
-  display: flex;           /* side-by-side layout */
-  align-items: center;     /* vertically center image & text */
-  gap: 40px;               /* space between image and paragraph */
-  max-width: 900px;        /* limit container width */
-  margin: 50px auto;       /* center on page with some top margin */
-  padding: 0 20px;         
-
-  height: auto;            /* keep aspect ratio */
-  border-radius: 4px;
-}
-
 .profile-text {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   color: #858484;
-  margin-top: 10px;
+  margin-top: 65px;
   margin-left: 30px;
 }
 
@@ -170,6 +155,13 @@ a:hover {
     display: block;
   }
 
+@media (min-width: 900px) {
+    .item { flex-basis: clamp(800px, 80vw, 800px); }
+.profile-text {margin-top: 170px;}
+
+  
+  }
+
   </style>
 
 
@@ -190,9 +182,8 @@ a:hover {
   <a href="Personal.html">personal</a>
 </nav>
 <div>
-<br> <br>
+
 <p align=left class="profile-text">
-<br><br>
   In my personal photography I work to visualise the meditative experience I have whilst taking photographs; for me this is a time of reflection and distraction.
 <br>I avoid predetermined social or political agendas and focus on the feeling of images first and foremost. 
 <br> Working mostly in long term photobook projects, I use photography and my environment to explore fictional narratives usually
@@ -217,12 +208,9 @@ through pairings and sequences.<br><br> </p>
   </div>
 </section>
 </div>
-<style>
+
  
-  @media (min-width: 900px) {
-    .item { flex-basis: clamp(800px, 80vw, 800px); }
-  }
-</style>
+  
 
 <script>
   // === Gallery scroll and keyboard controls ===
@@ -230,6 +218,7 @@ through pairings and sequences.<br><br> </p>
     const gallery = document.getElementById('gallery');
     const items = Array.from(gallery.querySelectorAll('.item'));
     let currentIndex = 0;
+gallery.scrollLeft = 0;
 
     function scrollToIndex(i) {
       i = Math.max(0, Math.min(items.length - 1, i));
@@ -276,13 +265,13 @@ through pairings and sequences.<br><br> </p>
 <div>
 
 
-<p align=center class="awards-features"
+<p align=center class="awards-features">
 
-Awards:
+<U>Awards:</U>
 
-Genesis Imaging and Djanogly Art Gallery Bursary Award 2019https://genesisimaging.co.uk/genesis-ntu-bursary-winner-2019-jack-pickerill/<br><br><br>
+<br><br>
+<br> <a href="https://genesisimaging.co.uk/genesis-ntu-bursary-winner-2019-jack-pickerill/" target="_blank" >Genesis Imaging and Djanogly Art Gallery Bursary Award 2019 </a>  <br><br><br>
 
-​
 
 <U>Group Exhibitions:</U><br><br>
 
@@ -316,8 +305,7 @@ In Passing - Lakeside Arts Djanogly Gallery (11.09.21 - 31.10.21) 
      
      
 <div class="tealstudios-link"> 
-  <a href="https:www.tealstudios.co.uk">Teal Studios</a>
-  
+  <a href="https://www.tealstudios.co.uk/" target="_blank" class="underline-link">Teal Studios</a>
      <br><br>
      <p>
   <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
