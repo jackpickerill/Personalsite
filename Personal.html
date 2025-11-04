@@ -81,7 +81,7 @@ a:hover {
 .main-nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #858484;
+  color: #000000;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 16px;
 }
@@ -139,7 +139,7 @@ a:hover {
   }
 
   .item {
-    flex: 0 0 clamp(800px, 80vw, 800px);
+    flex: 0 0 clamp(768px, 90vw, 800px);
     scroll-snap-align: left;
     border-radius: 0px;
     overflow: hidden;
@@ -221,6 +221,8 @@ through pairings and sequences.<br><br> </p>
     let currentIndex = 0;
 gallery.scrollLeft = 0;
 
+
+
     function scrollToIndex(i) {
       i = Math.max(0, Math.min(items.length - 1, i));
       currentIndex = i;
@@ -250,6 +252,14 @@ gallery.scrollLeft = 0;
       touchStartX = t.clientX;
       touchStartY = t.clientY;
     }, { passive: true });
+
+if (!('ontouchstart' in window)) {
+  gallery.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+      gallery.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+}
 
     gallery.addEventListener('touchend', e => {
       const t = e.changedTouches[0];
