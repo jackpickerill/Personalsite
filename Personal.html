@@ -123,10 +123,11 @@ a:hover {
  /* === Gallery styles === */
   .gallery {
     display: flex;
-    align-items: left;
+    align-items: start;
     gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x proximity;
+    scroll-snap-align: start;
     -webkit-overflow-scrolling: touch;
     padding: 12px 8px 20px 8px;
     scrollbar-width: thin;
@@ -140,7 +141,7 @@ a:hover {
 
   .item {
     flex: 0 0 clamp(768px, 90vw, 800px);
-    scroll-snap-align: left;
+    scroll-snap-align: start;
     border-radius: 0px;
     overflow: hidden;
     background: #efefef;
@@ -153,6 +154,7 @@ a:hover {
     object-fit: fill;
     aspect-ratio: auto;
     display: block;
+    scroll-snap-align: start;
   }
 
 @media (min-width: 900px) {
@@ -229,37 +231,10 @@ gallery.scrollLeft = 0;
       items[i].scrollIntoView({ behavior: 'smooth', inline: 'center' });
     }
 
-    gallery.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'd') {
-        e.preventDefault();
-        scrollToIndex(currentIndex + 1);
-      } else if (e.key === 'ArrowLeft' || e.key.toLowerCase() === 'a') {
-        e.preventDefault();
-        scrollToIndex(currentIndex - 1);
-      }
-    });
+   
 
-    gallery.addEventListener('wheel', (e) => {
-      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
-        gallery.scrollLeft += e.deltaY;
-        ;
-      }
-    }, { passive: false });
+  
 
-    let touchStartX = 0, touchStartY = 0;
-    gallery.addEventListener('touchstart', e => {
-      const t = e.touches[0];
-      touchStartX = t.clientX;
-      touchStartY = t.clientY;
-    }, { passive: true });
-
-if (!('ontouchstart' in window)) {
-  gallery.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
-      gallery.scrollLeft += e.deltaY;
-    }
-  }, { passive: false });
-}
 
     gallery.addEventListener('touchend', e => {
       const t = e.changedTouches[0];
