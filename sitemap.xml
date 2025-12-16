@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.jackpickerill.co.uk/</loc>
+  </url>
+
+  <!-- Still Life portfolio -->
+  <url>
+    <loc>https://www.jackpickerill.co.uk/still-life</loc>
+  </url>
+
+  <!-- People portfolio -->
+  <url>
+    <loc>https://www.jackpickerill.co.uk/people</loc>
+  </url>
+
+  <!-- About & Contact -->
+  <url>
+    <loc>https://www.jackpickerill.co.uk/about/contact</loc>
+  </url>
+
+  <!-- Personal work -->
+  <url>
+    <loc>https://www.jackpickerill.co.uk/personal</loc>
+  </url>
+
+  <!-- Blog (if you have posts under here) -->
+  <url>
+    <loc>https://www.jackpickerill.co.uk/blog</loc>
+  </url>
+
+</urlset>
