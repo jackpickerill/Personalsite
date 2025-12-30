@@ -8,7 +8,7 @@
 
   <!-- Still Life portfolio -->
   <url>
-    <loc>https://www.jackpickerill.co.uk/still-life</loc>
+    <loc>https://www.jackpickerill.co.uk/still%20life.html</loc>
   </url>
 
   <!-- People portfolio -->
@@ -18,17 +18,12 @@
 
   <!-- About & Contact -->
   <url>
-    <loc>https://www.jackpickerill.co.uk/about/contact</loc>
+    <loc>https://www.jackpickerill.co.uk/about.html</loc>
   </url>
 
   <!-- Personal work -->
   <url>
-    <loc>https://www.jackpickerill.co.uk/personal</loc>
-  </url>
-
-  <!-- Blog (if you have posts under here) -->
-  <url>
-    <loc>https://www.jackpickerill.co.uk/blog</loc>
+    <loc>https://www.jackpickerill.co.uk/Personal.html</loc>
   </url>
 
 </urlset>
