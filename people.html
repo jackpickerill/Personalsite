@@ -2,19 +2,17 @@
 <html>
 
 
-
-
-
 <head>
       <meta charset="UTF-8">
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="KvYnQeCyMtfqkuwifshiaA" async></script>
-  <link rel="canonical" href="https://www.jackpickerill.co.uk/people.html">
+  <link rel="canonical" href="https://www.jackpickerill.co.uk/Personal.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jack Pickerill Photographer | Product Photographer | Manchester</title>
   
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+
 
 <style>
   .site-title
@@ -27,8 +25,6 @@
   transform: scaleY(1.15);
   margin-bottom: 0;
   margin-top: 20;}
-
-
 
   .site-subtitle
   {color:#858484;
@@ -45,29 +41,10 @@
 body {
   font-family: 'Didact Gothic', sans-serif;
   background-color: #fbfbfb;
-  color: #fff;
+  color: #262626;
   margin: 0;
   padding: 0;
-}   
-
-.gallery {
-  display: grid;
-grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-  gap: 0;
-  padding: 10px;
-  margin:0px
-  max-width: 2500px;
-  justify-content: center ; /* optional: center gallery on page */
-  margin: 0 auto;
 }
-
-.gallery img {
-  display: block;
-  width: 100%;   /* ensures image fills its grid cell */
-  height: auto;  /* keeps aspect ratio */
-  object-fit: cover;
-  border-radius:0 ;
-  transition: transform 0.3s ease, opacity 0.3s ease;}
 
 .tealstudios-link
 {color: rgb(103, 189, 189);
@@ -94,8 +71,8 @@ margin-bottom: 50;}
 }
 
 a:hover {
-  text-decoration: underline; /* optional: underline on hover */
-  color: #858484;             /* optional: change color on hover */
+  text-decoration: underline; 
+  color: #858484;             
 }
 .main-nav {
   text-align: center;
@@ -114,90 +91,199 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 800px) {
-  .gallery {
-grid-template-columns: 1fr;
-padding: 0;
-align-content: center;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .profile-container {
-    flex-direction: column;
-    text-align: center;
-    max-width: 70%;
-    text-align: left;
-  }
-
-    .profile-image {
-      max-width: 50%;
-      max-height: auto;
-    margin-top: 3px;
+.profile-text {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #858484;
+  margin-top: 65px;
+  margin-left: 30px;
 }
- }
 
-</style>
+.awards-features {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #858484;
+}
+
+  
+  .profile-image {
+    margin-bottom: 20px;
+  }
+
+  .profile-right {
+    width: 100%;
+  }
+.form-container
+{margin-left: 320px;}
+
+.underline-link
+{text-decoration: underline;}
+
+ /* === Gallery styles === */
+  .gallery {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-snap-align: start;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 8px 20px 8px;
+    scrollbar-width: thin;
+  }
+
+  .gallery::-webkit-scrollbar { height: 10px; }
+  .gallery::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .item {
+    flex: 0 0 clamp(768px, 90vw, 800px);
+    scroll-snap-align: start;
+    border-radius: 0px;
+    overflow: hidden;
+    background: #efefef;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    aspect-ratio: auto;
+    display: block;
+    scroll-snap-align: start;
+  }
+
+@media (min-width: 900px) {
+    .item { flex-basis: clamp(800px, 80vw, 800px); }
+.profile-text {margin-top: 170px;}
+
+
+  
+  }
+
+  </style>
+
+
 </head>
 
 
 
-
-
-
-
-
 <body>
+
 <h1 class="site-title">Jack Pickerill</h1>
 <h2 class="site-subtitle">photographer</h2>
-  <nav class="main-nav">
+  
+ <nav class="main-nav">
     <a href="index.html">home</a>
    <a href="still life.html">still life</a>
     <a href="people.html">people</a>
      <a href="watches.html">watches</a>
   <a href="about.html">about/contact</a>
   <a href="Personal.html">personal</a>
+   <a href="journal.html">journal</a>
 </nav>
+<div>
 
-  <div class="gallery">
-    
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760986773/manchester-commercial-photographer-9_nkvrnb.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762177955/freelance-photographer-manchester_eqilrn.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176877/_DSC9836_1_Low_Res_nczres.jpg" alt="freelance-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760990515/_DSC7264_xyigzr.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/freelance-photographer-manchester_jhnyyq.jpg" alt="freelance-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991161/manchester-commercial-photographer-1_nfajjv.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991134/manchester-commercial-photographer-4_t3jx96.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/ALTRYN_ALT081_black10816_dxdbzp.jpg" alt="freelance-photographer-manchester">
-    
-       <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1763813654/freelance-photographer-_manchester-3_plimij.jpg" alt="freelance-photographer-manchester">
+<p align=left class="profile-text">
+  In my personal photography I work to visualise the meditative experience I have whilst taking photographs; for me this is a time of reflection and distraction.
+<br>I avoid predetermined social or political agendas and focus on the feeling of images first and foremost. 
+<br> Working mostly in long term photobook projects, I use photography and my environment to explore fictional narratives usually
+through pairings and sequences.<br><br> </p>
+<div class="profile-container">
+</div>
+  <div>
 
-    
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1763409248/_DSC0867_Low_Res_fmxzkf.jpg" alt="freelance-photographer-manchester">
+  <!-- HORIZONTAL SCROLL GALLERY -->
+<section class="photo-gallery-section">
+  <div class="wrap">
+    <h2 style="text-align:center; color:#858484; font-family:'Didact Gothic'; letter-spacing:4px; font-weight:100; margin-top:60px;">
 
+    </h2>
+    <p style="text-align:center; color:#a3a3a3; font-size:14px;"></p>
 
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991279/Jack_Pickerill-2_ikxwuu.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991583/manchester-commercial-photographer-3_lv83tm.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991606/Jack_Pickerill__20180227_21099_sxkw8v.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991858/17_London_Mar_21_2025_000571_htdjct.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20180317-Jack_Pickerill_180317_0074_it3qz2.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991190/manchester-commercial-photographer-11_vdmpqe.jpg" alt="product-photographer-manchester">
-
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20190425-Jack_Pickerill--2_tsdr8c.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20171118-Jack_Pickerill_171102_0018-2-Edit_mf2a4g.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20180505-Jack_Pickerill_180505_0063_qvdlku.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762418744/Jack_Pickerill__20200110_38379-Edit-Edit_iwolhu.jpg" alt="freelance-photographer-manchester">
-
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991216/manchester-commercial-photographer-13_wswezi.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/H_J_Ecom4173_fl0d4b.jpg" alt="freelance-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991492/_DSC7003_ezllvx.jpg" alt="product-photographer-manchester">
-
+    <div id="gallery" class="gallery" tabindex="0" aria-label="Photo gallery">
+      <div class="item"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1761950801/jack-pickerill-1-2_gtl4i4.jpg" alt="jack-pickerill"></div>
+      <div class="item"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1761950203/jack-pickerill-1_ekscil.jpg" alt="jack-pickerill"></div>
+      <div class="item"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1761950199/jack-pickerill-2_iukj6l.jpg" alt="jack-pickerill"></div>
+    </div>
   </div>
-</body>
+</section>
+</div>
+
+ 
+  
+
+<script>
+  // === Gallery scroll and keyboard controls ===
+  (function() {
+    const gallery = document.getElementById('gallery');
+    const items = Array.from(gallery.querySelectorAll('.item'));
+    let currentIndex = 0;
+gallery.scrollLeft = 0;
 
 
-     <img src="" alt="freelance-photographer-manchester">
 
+    function scrollToIndex(i) {
+      i = Math.max(0, Math.min(items.length - 1, i));
+      currentIndex = i;
+      items[i].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+
+   
+
+  
+
+
+    gallery.addEventListener('touchend', e => {
+      const t = e.changedTouches[0];
+      const dx = t.clientX - touchStartX;
+      const dy = t.clientY - touchStartY;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) scrollToIndex(currentIndex + 1);
+        else scrollToIndex(currentIndex - 1);
+      }
+    }, { passive: true });
+  })();
+</script>
+
+<div>
+
+
+<p align=center class="awards-features">
+
+<U>Awards:</U>
+
+<br><br>
+<br> <a href="https://genesisimaging.co.uk/genesis-ntu-bursary-winner-2019-jack-pickerill/" target="_blank" >Genesis Imaging and Djanogly Art Gallery Bursary Award 2019 </a>  <br><br><br>
+
+
+<U>Group Exhibitions:</U><br><br>
+
+Twelve - Rough Trade Nottingham (12.02.18) <br>
+
+Freerange Festival 2018 - Truman Brewary, London (28.06.18 - 02.07.18)<br>
+
+Above Below - Hung Up Gallery, Nottingham (24.05.19 - 08.06.19)<br>
+
+Freerange 2019 - Truman Brewary, London (28.06.19 - 02.07.19)<br>
+
+OFF Festival - Bratislava (31.10.19 - 15.11.19)<br>
+
+United in Light  - Wembley Park Outdoor Exhibition (25.11.21 - 04.01.22)<br><br>
+
+​
+
+<U>Solo Exhibitons:</U><br>
+
+In Passing - Lakeside Arts Djanogly Gallery (11.09.21 - 31.10.21) 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</p>
 
 
 <footer class="site-footer">
@@ -206,8 +292,9 @@ align-content: center;
     | <br></br> Phone:
      <a href="tel:07817597117">07817597117</a></p>
      
-
-
+     
+<div class="tealstudios-link"> 
+  <a href="https://www.tealstudios.co.uk/" target="_blank" class="underline-link">Teal Studios</a>
      <br><br>
      <p>
   <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
