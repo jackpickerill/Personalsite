@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
       <meta charset="UTF-8">
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="KvYnQeCyMtfqkuwifshiaA" async></script>
@@ -15,8 +14,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
 
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
   .site-title
-  {color:#858484;
+  {
+  margin-top: 1.5rem;color:#858484;
   text-align: center;
   font-family: 'Didact Gothic';
   letter-spacing: 6px;
@@ -24,7 +25,7 @@
   font-size: 36px;
   transform: scaleY(1.15);
   margin-bottom: 0;
-  margin-top: 20;}
+  line-height: 0.8;}
 
   .site-subtitle
   {color:#858484;
@@ -37,6 +38,7 @@
   transform: scaleY(1.15);
   margin-top: 2px;
   }
+.subtitle-text { font-size: 0.55em; font-weight: normal; }
 
 body {
   font-family: 'Didact Gothic', sans-serif;
@@ -114,11 +116,14 @@ a:hover {
   font-size: 16px;
   line-height: 1.5;
   color: #858484;
+    margin: 50px auto;       /* center on page with some top margin */
+
   margin-bottom: 250px;
+
 }
 .profile-container{
   display: flex;           /* side-by-side layout */
-  align-items: center;     /* vertically center image & text */
+  align-items: flex-start;     /* vertically center image & text */
   gap: 40px;               /* space between image and paragraph */
   max-width: 900px;        /* limit container width */
   margin: 50px auto;       /* center on page with some top margin */
@@ -151,6 +156,9 @@ a:hover {
 
 .underline-link
 {text-decoration: underline;}
+
+
+
   </style>
 
 
@@ -160,8 +168,8 @@ a:hover {
 
 <body>
 
-<h1 class="site-title">Jack Pickerill</h1>
-<h2 class="site-subtitle">photographer</h2>
+<h1 class="site-title">Jack Pickerill <br> <span class="subtitle-text">Freelance Photographer | Manchester</span></h1>
+<h2 class="site-subtitle"> <span class="subtitle-text">Product & Portrait Photographer</span></h2>
   
  <nav class="main-nav">
     <a href="index.html">home</a>
@@ -180,8 +188,19 @@ src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759602073/jackpickerill
 style="width: 300px;" 
 alt="product-photographer-manchester"></img>
 
-<p class="profile-text"> A multifaceted photographer living and working in Manchester as a full time freelancer.<br></br>
-Alongside my own projects I also manage the product photography agency <a href="https://tealstudios.co.uk/" target="_blank" class="underline-link">Teal Studios</a>
+<p class="profile-text"> Photography found me in 2010, through a Bmx and my Mums point and shoot camera.<br><br>
+
+What started as a way to document tricks quickly became an obsession with light, how it falls, how to shape it and how it can transform a subject.<br><br>
+
+I went on to study photography at Nottingham Trent, graduating in 2019 with the joint highest mark in my year and winning the <U><a href="https://genesisimaging.co.uk/news/genesis-ntu-bursary-winner-2019-jack-pickerill/">Genesis Imaging and Djanogly Art Gallery Bursary Award.</a></U><br><br>
+
+From there I spent five years in Manchester shooting for Russell Hobbs, where shooting chrome and high gloss products every day taught me more about lighting precision than anything else could.
+<br><br> After that I moved into a full time role as lead photographer for Manchester based agency Capture Creative where I led global campaigns for the streetwear brands 11 degrees, Altryn and ATSG among others and established the in house studio from the ground up.
+
+<br><br>Since leaving the agency I’ve been living and working in Manchester as a full time freelancer, working with brands and ecommerce clients that care as much about the details as I do. 
+
+<br><br>Alongside my freelance projects, I also head up <a href="https://www.tealstudios.co.uk/">Teal Studios</a>, a Manchester product photography agency.
+
 <br><br>I'm happy to answer any enquiries regarding rates and availability, feel free to email jackpickerill@live.co.uk or call the contact number below.</p>
 </div>
 
@@ -214,5 +233,4 @@ Alongside my own projects I also manage the product photography agency <a href="
 </p>
 
 </footer>
-</html>  
-
+</html>
