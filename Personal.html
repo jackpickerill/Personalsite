@@ -5,7 +5,7 @@
 <head>
       <meta charset="UTF-8">
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="KvYnQeCyMtfqkuwifshiaA" async></script>
-  <link rel="canonical" href="https://www.jackpickerill.co.uk/Personal.html">
+  <link rel="canonical" href="https://www.jackpickerill.co.uk/personal.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jack Pickerill Photographer | Product Photographer | Manchester</title>
   
@@ -15,8 +15,10 @@
 
 
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
   .site-title
-  {color:#858484;
+  {
+  margin-top: 1.5rem;color:#858484;
   text-align: center;
   font-family: 'Didact Gothic';
   letter-spacing: 6px;
@@ -24,7 +26,7 @@
   font-size: 36px;
   transform: scaleY(1.15);
   margin-bottom: 0;
-  margin-top: 20;}
+  line-height: 0.8;}
 
   .site-subtitle
   {color:#858484;
@@ -51,19 +53,17 @@ body {
 align-content: center;}
 
 
-.site-footer 
-{ 
-  color:#858484;
-  text-align: center;
-  line-height: 11px;
-  font-family: 'Didact Gothic';
-  letter-spacing: 1px;
-  font-weight: 100;
-  font-size: 15px;
-  transform: scaleY(1);
-  margin-bottom: 0;
-  margin-top: 100;
-margin-bottom: 50;}
+/* ── FOOTER ── */
+    .site-footer {
+      color: #858484;
+      text-align: center;
+      line-height: 11px;
+      font-family: 'Didact Gothic';
+      letter-spacing: 1px;
+      font-weight: 100;
+      font-size: 15px;
+      margin-bottom: 50px;
+    }
 
   a {
   color: inherit;       /* makes the link take the text color of its parent */
@@ -97,7 +97,12 @@ a:hover {
   line-height: 1.5;
   color: #858484;
   margin-top: 65px;
-  margin-left: 30px;
+  margin-left: 65px;
+      max-width: 600px;
+      text-align: left;
+
+
+
 }
 
 .awards-features {
@@ -157,6 +162,7 @@ a:hover {
     display: block;
     scroll-snap-align: start;
   }
+  
 
 @media (min-width: 900px) {
     .item { flex-basis: clamp(800px, 80vw, 800px); }
@@ -166,7 +172,8 @@ a:hover {
   
   }
 
-  </style>
+  .subtitle-text { font-size: 0.55em; font-weight: normal; }
+</style>
 
 
 </head>
@@ -175,8 +182,8 @@ a:hover {
 
 <body>
 
-<h1 class="site-title">Jack Pickerill</h1>
-<h2 class="site-subtitle">photographer</h2>
+<h1 class="site-title">Jack Pickerill <br> <span class="subtitle-text">Freelance Photographer | Manchester</span></h1>
+<h2 class="site-subtitle"> <span class="subtitle-text">Product &amp; Portrait Photographer</span></h2>
   
  <nav class="main-nav">
     <a href="index.html">home</a>
@@ -188,8 +195,7 @@ a:hover {
    <a href="journal.html">journal</a>
 </nav>
 <div>
-
-<p align=left class="profile-text">
+<p class="profile-text"> 
   In my personal photography I work to visualise the meditative experience I have whilst taking photographs; for me this is a time of reflection and distraction.
 <br>I avoid predetermined social or political agendas and focus on the feeling of images first and foremost. 
 <br> Working mostly in long term photobook projects, I use photography and my environment to explore fictional narratives usually
@@ -287,23 +293,23 @@ In Passing - Lakeside Arts Djanogly Gallery (11.09.21 - 31.10.21) 
 
 
 <footer class="site-footer">
-  <p><br><br>Email: 
-    <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a> 
-    | <br></br> Phone:
-     <a href="tel:07817597117">07817597117</a></p>
-     
-     
-<div class="tealstudios-link"> 
-  <a href="https://www.tealstudios.co.uk/" target="_blank" class="underline-link">Teal Studios</a>
-     <br><br>
-     <p>
-  <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
-      <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593166/instagram_logo_mpb0im.avif" alt="Instagram" class="social-icon">
-    </a>
-<a href="https://www.linkedin.com/in/jackpickerill/" target="_blank" rel="noopener noreferrer">
-      <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593148/linkedinlogo_aepjgt.avif" alt="linkedin" class="social-icon">
-    </a>
-</p>
+    <p><br><br>Email:
+      <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a>
+      |<br><br>Phone:
+      <a href="tel:07817597117">07817597117</a>|<br><br>
+    </p>
+    <div class="tealstudios-link">
+      <a href="https://www.tealstudios.co.uk/" target="_blank">Teal Studios</a>
+      <br><br>
+      <p>
+        <a href="https://www.instagram.com/_jackpickerill" target="_blank" rel="noopener noreferrer">
+          <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593166/instagram_logo_mpb0im.avif" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/jackpickerill/" target="_blank" rel="noopener noreferrer">
+          <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759593148/linkedinlogo_aepjgt.avif" alt="linkedin" class="social-icon">
+        </a>
+      </p>
+    </div>
+  </footer>
 
-</footer>
 </html>  
