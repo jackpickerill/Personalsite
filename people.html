@@ -31,14 +31,7 @@
   margin-bottom: 0;
   line-height: 0.8;}
 
-@media (max-width: 600px) {
-  .site-title {
-    font-size: 20px;
-  }
-  .site-subtitle {
-    font-size: 14px;
-  }
-}
+
 
   .site-subtitle
   {color:#858484;
@@ -148,6 +141,14 @@ align-content: center;
  }
 
 .subtitle-text { font-size: 0.55em; font-weight: normal; }
+    header {
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+@media (max-width: 600px) {
+  .site-title { font-size: 20px; }
+  .site-subtitle { font-size: 14px; }
+}
 </style>
 </head>
 
@@ -159,6 +160,7 @@ align-content: center;
 
 
 <body>
+<header>
 <h1 class="site-title">Jack Pickerill <br> <span class="subtitle-text">Freelance Photographer | Manchester</span></h1>
 <h2 class="site-subtitle"> <span class="subtitle-text">Product &amp; Portrait Photographer</span></h2>
   <nav class="main-nav">
@@ -171,7 +173,8 @@ align-content: center;
    <a href="journal.html">journal</a>
 </nav>
 
-  <div class="gallery">
+  </header>
+<div class="gallery">
     
     <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760986773/manchester-commercial-photographer-9_nkvrnb.jpg" alt="product-photographer-manchester">
     <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762177955/freelance-photographer-manchester_eqilrn.jpg" alt="product-photographer-manchester">
