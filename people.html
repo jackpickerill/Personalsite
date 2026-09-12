@@ -131,14 +131,16 @@ a:hover {
 
 @media (max-width: 800px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile instead of 1, so "big" tiles still make sense */
+    grid-template-columns: 1fr; /* one image per row on mobile */
     padding: 0;
     max-width: 100%;
     margin: 0 auto;
+    gap: 10px;
   }
 
+  .tile,
   .tile.big {
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   .profile-container {
@@ -148,10 +150,11 @@ a:hover {
     text-align: left;
   }
 
-    .profile-image {
-      max-width: 50%;
-      max-height: auto;
+  .profile-image {
+    max-width: 50%;
+    max-height: auto;
     margin-top: 3px;
+  }
 }
  }
 
