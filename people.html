@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
-
-
-
 <head>
       <meta charset="UTF-8">
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="KvYnQeCyMtfqkuwifshiaA" async></script>
@@ -12,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jack Pickerill Photographer | Product Photographer | Manchester</title>
 <meta name="description" content="Writing and essays on photography by Jack Pickerill, Manchester-based freelance photographer and product photographer. Thoughts on art, surrealism and visual culture." />
-  
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
@@ -51,34 +47,50 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-}   
+}
 
+/* ---------------------------------------------------------
+   GALLERY — masonry-style grid
+   - a fine grid-auto-rows unit lets each tile's row-span be
+     set to match its real image height (JS below measures it)
+   - grid-auto-flow: dense backfills any gaps left by bigger tiles
+   - .tile.big spans 2 columns for the occasional larger image
+---------------------------------------------------------- */
 .gallery {
   display: grid;
-grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-  gap: 0;
+  grid-template-columns: repeat(3, 1fr); /* same 3 columns as before */
+  grid-auto-rows: 8px;      /* fine unit — smaller = more precise heights */
+  grid-auto-flow: dense;    /* fills gaps left by spanned tiles */
+  gap: 10px;
   padding: 10px;
-  margin:0px
   max-width: 2500px;
-  justify-content: center ; /* optional: center gallery on page */
   margin: 0 auto;
+}
+
+.tile {
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.tile.big {
+  grid-column: span 2;   /* occasional wider tile */
 }
 
 .gallery img {
   display: block;
-  width: 100%;   /* ensures image fills its grid cell */
-  height: auto;  /* keeps aspect ratio */
-  object-fit: cover;
-  border-radius:0 ;
-  transition: transform 0.3s ease, opacity 0.3s ease;}
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crops to fill the tile's computed cell size */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 .tealstudios-link
 {color: rgb(103, 189, 189);
 align-content: center;}
 
 
-.site-footer 
-{ 
+.site-footer
+{
   color:#858484;
   text-align: center;
   line-height: 11px;
@@ -92,13 +104,13 @@ align-content: center;}
 margin-bottom: 50;}
 
   a {
-  color: inherit;       /* makes the link take the text color of its parent */
-  text-decoration: none; /* removes underline */
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* optional: underline on hover */
-  color: #858484;             /* optional: change color on hover */
+  text-decoration: underline;
+  color: #858484;
 }
 .main-nav {
   text-align: center;
@@ -119,11 +131,14 @@ a:hover {
 
 @media (max-width: 800px) {
   .gallery {
-grid-template-columns: 1fr;
-padding: 0;
-align-content: center;
+    grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile instead of 1, so "big" tiles still make sense */
+    padding: 0;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  .tile.big {
+    grid-column: span 2;
   }
 
   .profile-container {
@@ -153,12 +168,6 @@ align-content: center;
 </head>
 
 
-
-
-
-
-
-
 <body>
 <header>
 <h1 class="site-title">Jack Pickerill <br> <span class="subtitle-text">Freelance Photographer | Manchester</span></h1>
@@ -174,55 +183,95 @@ align-content: center;
 </nav>
 
   </header>
-<div class="gallery">
+
+<!--
+  To make an image large, add " big" to its tile's class,
+  e.g. class="tile big" — that's the only thing that controls it.
+  No limit on how many, though 1 in every 4–5 tends to look best.
+-->
+<div class="gallery" id="gallery">
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789218402/11_Warehouse2982-Enhanced-NR_ikkztf.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762177955/freelance-photographer-manchester_eqilrn.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176877/_DSC9836_1_Low_Res_nczres.jpg" alt="freelance-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789219051/_DSC7264_2_echh0q.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/freelance-photographer-manchester_jhnyyq.jpg" alt="freelance-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991161/manchester-commercial-photographer-1_nfajjv.jpg" alt="product-photographer-manchester"></div>
+                  <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789214612/freelance-photographer-manchester_3_glrofr.jpg" alt="freelance-photographer-manchester"></div>
+    <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789214613/freelance-photographer-manchester_4_hyfuj8.jpg" alt="freelance-photographer-manchester"></div>
+
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991134/manchester-commercial-photographer-4_t3jx96.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/ALTRYN_ALT081_black10816_dxdbzp.jpg" alt="freelance-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1763813654/freelance-photographer-_manchester-3_plimij.jpg" alt="freelance-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1763409248/_DSC0867_Low_Res_fmxzkf.jpg" alt="freelance-photographer-manchester"></div>
+                    <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789214611/freelance-photographer-manchester_2_kdq8o3.jpg" alt="freelance-photographer-manchester"></div>
+
+    <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991279/Jack_Pickerill-2_ikxwuu.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991583/manchester-commercial-photographer-3_lv83tm.jpg" alt="product-photographer-manchester"></div>
     
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760986773/manchester-commercial-photographer-9_nkvrnb.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762177955/freelance-photographer-manchester_eqilrn.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176877/_DSC9836_1_Low_Res_nczres.jpg" alt="freelance-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760990515/_DSC7264_xyigzr.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/freelance-photographer-manchester_jhnyyq.jpg" alt="freelance-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991161/manchester-commercial-photographer-1_nfajjv.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991134/manchester-commercial-photographer-4_t3jx96.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/ALTRYN_ALT081_black10816_dxdbzp.jpg" alt="freelance-photographer-manchester">
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991606/Jack_Pickerill__20180227_21099_sxkw8v.jpg" alt="product-photographer-manchester"></div>
     
-       <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1763813654/freelance-photographer-_manchester-3_plimij.jpg" alt="freelance-photographer-manchester">
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991858/17_London_Mar_21_2025_000571_htdjct.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20180317-Jack_Pickerill_180317_0074_it3qz2.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991190/manchester-commercial-photographer-11_vdmpqe.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20190425-Jack_Pickerill--2_tsdr8c.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20171118-Jack_Pickerill_171102_0018-2-Edit_mf2a4g.jpg" alt="product-photographer-manchester"></div>
 
-    
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1763409248/_DSC0867_Low_Res_fmxzkf.jpg" alt="freelance-photographer-manchester">
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20180505-Jack_Pickerill_180505_0063_qvdlku.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991216/manchester-commercial-photographer-13_wswezi.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/H_J_Ecom4173_fl0d4b.jpg" alt="freelance-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991492/_DSC7003_ezllvx.jpg" alt="product-photographer-manchester"></div>
+    <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1784979305/Freelance-photographer-manchester_bcbo1s.jpg" alt="freelance-photographer-manchester"></div>
+       <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789214613/freelance-photographer-manchester_rzwdll.jpg" alt="freelance-photographer-manchester"></div>
+             <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789214612/freelance-photographer-manchester_1_z6r0wj.jpg" alt="freelance-photographer-manchester"></div>
+</div>
 
+<script>
+  // ----------------------------------------------------------------
+  // Masonry sizing script
+  // Which tiles are "big" is now set by hand in the HTML (class="tile big")
+  // — this script just measures each image's real rendered height and
+  // converts that into a grid-row span, so every tile's row height
+  // matches its actual image. That's what removes the gaps.
+  // Re-runs on window resize since column width (and therefore each
+  // image's rendered height) changes at different screen sizes.
+  // ----------------------------------------------------------------
+  const gallery = document.getElementById('gallery');
+  const tiles = Array.from(gallery.querySelectorAll('.tile'));
 
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991279/Jack_Pickerill-2_ikxwuu.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991583/manchester-commercial-photographer-3_lv83tm.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991606/Jack_Pickerill__20180227_21099_sxkw8v.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991858/17_London_Mar_21_2025_000571_htdjct.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20180317-Jack_Pickerill_180317_0074_it3qz2.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991190/manchester-commercial-photographer-11_vdmpqe.jpg" alt="product-photographer-manchester">
+  function resizeGridItem(tile) {
+    const rowHeight = 8;   // must match grid-auto-rows in CSS
+    const rowGap = 10;     // must match gap in CSS
+    const img = tile.querySelector('img');
+    if (!img || !img.naturalHeight) return;
+    const contentHeight = tile.getBoundingClientRect().width * (img.naturalHeight / img.naturalWidth);
+    const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
+    tile.style.gridRowEnd = 'span ' + rowSpan;
+  }
 
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992060/20190425-Jack_Pickerill--2_tsdr8c.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20171118-Jack_Pickerill_171102_0018-2-Edit_mf2a4g.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760992061/20180505-Jack_Pickerill_180505_0063_qvdlku.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762418744/Jack_Pickerill__20200110_38379-Edit-Edit_iwolhu.jpg" alt="freelance-photographer-manchester">
+  function resizeAllGridItems() {
+    tiles.forEach(resizeGridItem);
+  }
 
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991216/manchester-commercial-photographer-13_wswezi.jpg" alt="product-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1762176876/H_J_Ecom4173_fl0d4b.jpg" alt="freelance-photographer-manchester">
-    <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1760991492/_DSC7003_ezllvx.jpg" alt="product-photographer-manchester">
-        <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1784979305/Freelance-photographer-manchester_bcbo1s.jpg" alt="freelance-photographer-manchester">
+  window.addEventListener('load', resizeAllGridItems);
+  window.addEventListener('resize', () => {
+    clearTimeout(window._resizeTimer);
+    window._resizeTimer = setTimeout(resizeAllGridItems, 150);
+  });
 
-
-  </div>
-</body>
-
-
-     <img src="" alt="freelance-photographer-manchester">
-
-
+  // in case some images are cached and already "complete" before load fires
+  tiles.forEach(tile => {
+    const img = tile.querySelector('img');
+    if (img.complete) resizeGridItem(tile);
+    else img.addEventListener('load', () => resizeGridItem(tile));
+  });
+</script>
 
 <footer class="site-footer">
-  <p><br><br>Email: 
-    <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a> 
+  <p><br><br>Email:
+    <a href="mailto:jackpickerill@live.co.uk">jackpickerill@live.co.uk</a>
     | <br></br> Phone:
      <a href="tel:07817597117">07817597117</a></p>
-     
+
 
 
      <br><br>
@@ -236,4 +285,5 @@ align-content: center;
 </p>
 
 </footer>
-</html>  
+</body>
+</html>
