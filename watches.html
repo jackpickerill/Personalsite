@@ -179,6 +179,7 @@ line-height: 0.8;
     font-size: 0.55em;
     font-weight: normal; /* optional, removes bold if you want it lighter */
 }
+
 @media (max-width: 800px) {
   .gallery {
     grid-template-columns: 1fr; /* one image per row on mobile */
@@ -187,8 +188,29 @@ line-height: 0.8;
     margin: 0 auto;
     gap: 10px;
   }
+}
+@media (max-width: 800px) {
+  .gallery {
+    display: block;       /* kill the grid entirely — just stack */
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
+  .tile,
+  .tile.big {
+    grid-column: unset;
+    grid-row: unset !important;   /* overrides the inline row-span from JS */
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
+  .gallery img {
+    width: 100%;
+    height: auto;         /* let it scale naturally instead of being cropped to a fixed tile height */
+    object-fit: unset;
+  }
+}
 
 
     /* PROFILE SECTION */
