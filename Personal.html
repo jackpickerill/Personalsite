@@ -92,18 +92,16 @@ line-height: 0.8;
         overflow-y: auto;   /* allow vertical scrolling */
             }
 
-        
-@media (max-width: 600px) {
-  .site-title {
-    font-size: 20px;
-  }
-  .site-subtitle {
-    font-size: 14px;
-  }
-}
+      
+
+  .subtitle-text { font-size: 0.55em; font-weight: normal; }
+    header {
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
             /* Header */
             header {
-                position: absolute;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -282,9 +280,16 @@ line-height: 2;
     display: block;
     scroll-snap-align: start;
   }
-  
 
-@media (min-width: 900px) {
+  @media (max-width: 600px) {
+  .site-title {
+    font-size: 20px;
+  }
+  .site-subtitle {
+    font-size: 14px;
+  }
+}
+    @media (min-width: 900px) {
     .item { flex-basis: clamp(800px, 80vw, 800px); }
 .profile-text {margin-top: 170px;}
 
@@ -292,11 +297,7 @@ line-height: 2;
   
   }
 
-  .subtitle-text { font-size: 0.55em; font-weight: normal; }
-    header {
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
+
 </style>
 
         </style>
@@ -332,8 +333,8 @@ line-height: 2;
 
 <div>
 
-  <br><br><br><br><br>
-<p class="profile-text"> 
+<div style="margin-top: 50px;">
+  <p class="profile-text"> <p class="profile-text"> 
   In my personal photography I work to bring the experience I have whilst taking photographs into the final image; for me this is usually a time of reflection.
   <br> Working mostly in long term photobook projects, I use photography to explore the narrative found in sets of images through pairings and sequences.<br><br> </p>
 <br>I avoid seeking social or political agendas and focus on the feeling of images first and foremost. 
