@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jack Pickerill | Freelance Photographer | Manchester</title>
+        <title>Freelance Photographer Manchester | Jack Pickerill</title>
         <meta name="description" content="Jack Pickerill — Manchester product photographer and freelance photographer available for commercial, editorial and creative photography projects." />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
         <style>
@@ -116,12 +116,18 @@ line-height: 0.8;
             }
 
             @media (max-width: 768px) {
-                .swiper-slide img {
-                    max-height: 80vh;
-                    padding-top: 2.5rem;
-                }
-            }
+    .swiper > br { display: none; }          /* removes the 4 <br> gap on mobile only */
 
+    header {
+        position: relative;                  /* header now takes up space, so no overlap */
+    }
+
+   
+    .swiper-slide img {
+        max-height: 70vh;
+        padding-top: 0;
+    }
+}
             /* Image pair container */
             .image-pair {
                 display: flex;
