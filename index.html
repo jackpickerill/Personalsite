@@ -129,20 +129,35 @@ line-height: 0.8;
     }
 }
             /* Image pair container */
-        .image-pair {
+            .image-pair {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                width: calc(100% - 3rem);
+                height: calc(100vh - 15rem);
+            }
+
+            .image-pair img {
+                max-width: calc(50% - 1rem);
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+           @media (max-width: 768px) {
+    .image-pair {
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;   /* added */
+        align-items: center;       /* added */
         gap: 1rem;
-        height: auto;              /* was 75vh: let the content set the height */
-        padding-top: 1.5rem;       /* breathing room under the nav */
+        height: 75vh;
     }
 
     .image-pair img {
         max-width: 100%;
-        max-height: 36vh;          /* two images + gap fit on screen */
+        max-height: calc(50% - 0.5rem);
     }
-
-
+}
 @media (max-width: 600px) {
   .site-title {
     font-size: 20px;
