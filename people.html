@@ -173,15 +173,19 @@
             font-weight: normal;
         }
 
-        @media (max-width: 800px) {
-            .gallery {
-                grid-template-columns: 1fr;
-                padding: 0;
-                max-width: 100%;
-                margin: 0 auto;
-                gap: 10px;
-            }
-        }
+      @media (max-width: 800px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .tile.big {
+        grid-column: auto;   /* stop spanning a column that doesn't exist */
+    }
+}
 
         .profile-text {
             font-family: 'Didact Gothic', sans-serif;
