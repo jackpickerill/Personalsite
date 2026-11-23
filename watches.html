@@ -118,7 +118,8 @@ line-height: 0.8;
   grid-column: span 2;   /* occasional wider tile */
 }
 
-.gallery img {
+.gallery img,
+.gallery video {
   display: block;
   width: 100%;
   height: 100%;
@@ -205,7 +206,8 @@ line-height: 0.8;
     margin-bottom: 10px;
   }
 
-  .gallery img {
+  .gallery img,
+  .gallery video {
     width: 100%;
     height: auto;         /* let it scale naturally instead of being cropped to a fixed tile height */
     object-fit: unset;
@@ -286,11 +288,18 @@ line-height: 0.8;
   No limit on how many, though 1 in every 4–5 tends to look best.
 -->
 <div class="gallery" id="gallery">
-            <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1778866955/Sky_Dweller_336934_3_pcye0q.jpg" alt="Close-up of a Rolex Sky-Dweller with black dial, white gold fluted bezel and Jubilee bracelet, luxury watch photography" title="Rolex Sky-Dweller Macro Watch Photography"></div>
-                <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1790509404/watch-photographer-manchester_gcsmrs.jpg" alt="a gold rolex rainbow daytona watch photographed on a gold background with dark and dramatic shadows" title="Rolex watch photography by Manchester photographer"></div>
+            
+  <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1778866955/Sky_Dweller_336934_3_pcye0q.jpg" alt="Close-up of a Rolex Sky-Dweller with black dial, white gold fluted bezel and Jubilee bracelet, luxury watch photography" title="Rolex Sky-Dweller Macro Watch Photography"></div>
+  
+  <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1790509404/watch-photographer-manchester_gcsmrs.jpg" alt="a gold rolex rainbow daytona watch photographed on a gold background with dark and dramatic shadows" title="Rolex watch photography by Manchester photographer"></div>
         <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1768426313/product-photographer-manchester4_brcmxa.jpg" alt="Seiko chronograph with grey dial and steel bracelet on a soft white gradient background, watch product photography" title="Seiko Chronograph Product Shot"></div>
                 <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1795020621/FP_Journe_Watch_Photography_rg5br0.jpg" alt="F.P.Journe Élégante Titalyte watch in its presentation box with additional FP Journe box in the background, shot by a professional photographer with studio lighting" title="F.P.Journe Élégante Watch Photography"></div>
-        
+        <div class="tile">
+          <video autoplay loop muted playsinline preload="metadata"
+                 poster="https://res.cloudinary.com/doyoxfreh/video/upload/so_0/v1795435930/Seiko_Pressage_Crown_Video_x3obor.jpg">
+            <source src="https://res.cloudinary.com/doyoxfreh/video/upload/q_auto/v1795435930/Seiko_Pressage_Crown_Video_x3obor.webm" type="video/webm">
+            <source src="https://res.cloudinary.com/doyoxfreh/video/upload/q_auto/v1795435930/Seiko_Pressage_Crown_Video_x3obor.mp4" type="video/mp4">
+          </video>
         <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1790973564/Beach_Daytona_Set_hibcox.jpg" alt="Rolex Cosmograph Daytona Beach Full Collection 116519 shot under professional studio lighting, on top of blue, pink,green and rolex yellow boxes" title="Rolex beach daytona set professional photography"></div>
       
                 <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1791132627/Beach_Daytona_Set_7_1_copy_en9ppv.jpg" alt="Rolex Cosmograph Daytona Beach Full Collection 116519 shot under professional studio lighting, on top of blue, pink,green and rolex yellow boxes" title="Rolex beach daytona set professional photography"></div>
@@ -298,6 +307,9 @@ line-height: 0.8;
     <div class="tile big"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1780407835/1_Low_Res_r3jm54.jpg" alt="Seiko Presage automatic watch with pale blue sunburst dial Macro photography of dial, bezel and hands" title="Seiko pressage studio photography"></div>
     
     <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1780407834/2_Low_Res_kbhbyl.jpg" alt="Seiko Presage automatic watch with pale blue sunburst dial Macro photography of watch" title="Seiko pressage studio photography by Jack Pickerill"></div>
+
+        
+        </div>
         <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1779194085/Rear_Case_Back_Low_Res_bh0fxp.jpg" alt="Back of a Duckworth Prestex watch showing the engraved duck on the steel caseback and brown Horween leather strap, on white" title="Duckworth Prestex Caseback Product Shot"></div>
         <div class="tile"><img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1778866958/Rolex_Daytona_Oysterflex_126515LN_2_ytbmrj.jpg" alt="Rose gold Rolex Daytona chronograph with black dial and black rubber strap on a concrete surface, luxury watch photography in Manchester" title="Rose Gold Rolex Daytona on Concrete"></div>
        
@@ -356,12 +368,19 @@ line-height: 0.8;
   const gallery = document.getElementById('gallery');
   const tiles = Array.from(gallery.querySelectorAll('.tile'));
 
+  function getRatio(el) {
+    if (el.tagName === 'VIDEO') return el.videoHeight / el.videoWidth;
+    return el.naturalHeight / el.naturalWidth;
+  }
+
   function resizeGridItem(tile) {
     const rowHeight = 8;   // must match grid-auto-rows in CSS
     const rowGap = 10;     // must match gap in CSS
-    const img = tile.querySelector('img');
-    if (!img || !img.naturalHeight) return;
-    const contentHeight = tile.getBoundingClientRect().width * (img.naturalHeight / img.naturalWidth);
+    const media = tile.querySelector('img, video');
+    if (!media) return;
+    const ratio = getRatio(media);
+    if (!ratio || !isFinite(ratio)) return;
+    const contentHeight = tile.getBoundingClientRect().width * ratio;
     const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
     tile.style.gridRowEnd = 'span ' + rowSpan;
   }
@@ -376,11 +395,17 @@ line-height: 0.8;
     window._resizeTimer = setTimeout(resizeAllGridItems, 150);
   });
 
-  // in case some images are cached and already "complete" before load fires
+  // handle media that is already loaded before the load event fires
   tiles.forEach(tile => {
-    const img = tile.querySelector('img');
-    if (img.complete) resizeGridItem(tile);
-    else img.addEventListener('load', () => resizeGridItem(tile));
+    const media = tile.querySelector('img, video');
+    if (!media) return;
+    if (media.tagName === 'VIDEO') {
+      if (media.readyState >= 1) resizeGridItem(tile);
+      else media.addEventListener('loadedmetadata', () => resizeGridItem(tile));
+    } else {
+      if (media.complete) resizeGridItem(tile);
+      else media.addEventListener('load', () => resizeGridItem(tile));
+    }
   });
 </script>
 
