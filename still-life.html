@@ -165,8 +165,21 @@ line-height: 0.8;
       object-fit: cover;
       border-radius: 0;
       transition: transform 0.3s ease, opacity 0.3s ease;
-   
+    }
 
+    /* Two portrait videos side by side, filling the same width as one image */
+    .video-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+      margin-bottom: 10px;
+    }
+
+    .video-pair video {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
 
@@ -263,6 +276,21 @@ line-height: 0.8;
         <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1789478280/Nowhere_Soon4931_yjgdj9.jpg" alt="2 metal hoop ear rings hanging on a wire sticking up out of a black rock. shot with studio lighitng and with motion blur" title="creative jewellery photography by Jack Pickerill">
         <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1793097589/Sivalor_Jewellery_Shoot_rear_ring_light16291_Re_edit_for_portfolio_Low_res_atpj3e.jpg" alt="ring balanced on a dark rock against a black background, low-key jewellery photography Manchester" title="Low-Key Masculine Ring Photography">
 
+
+        
+<div class="video-pair">
+  <video autoplay loop muted playsinline preload="metadata"
+         poster="https://res.cloudinary.com/doyoxfreh/video/upload/v1795430510/Lipstick_Lid_On_Loop_abomlo.jpg">
+    <source src="https://res.cloudinary.com/doyoxfreh/video/upload/v1795430510/Lipstick_Lid_On_Loop_abomlo.webm" type="video/webm">
+    <source src="https://res.cloudinary.com/doyoxfreh/video/upload/v1795430510/Lipstick_Lid_On_Loop_abomlo.mov" type="video/mov">
+  </video>
+
+  <video autoplay loop muted playsinline preload="metadata"
+         poster="https://res.cloudinary.com/doyoxfreh/video/upload/v1795430514/Lid_Off_Slow_m1m1u2.jpg">
+    <source src="https://res.cloudinary.com/doyoxfreh/video/upload/v1795430514/Lid_Off_Slow_m1m1u2.webm" type="video/webm">
+    <source src="https://res.cloudinary.com/doyoxfreh/video/upload/v1795430514/Lid_Off_Slow_m1m1u2.mp4" type="video/mp4">
+  </video>
+</div>
 
     <img src="https://res.cloudinary.com/doyoxfreh/image/upload/v1759591200/product-photography-manchester-16_asbwyx.jpg" alt="Grey pleated pendant lamp above a wooden side table with a small vase of dried stems against a peach wall" title="Pendant Lamp and Wooden Table Still Life">
 
